@@ -22,3 +22,7 @@ This is a personal learning repo. No credentials or sensitive info are committed
 
 ## 🙏 Contributions
 Feedback, ideas, and code reviews welcome.
+
+## 🔁 Monthly Cleanup Checklist (Stay Under Budget)
+[View pinned issue →](https://github.com/jonriggert/aws-practice-lab/issues/6)
+
