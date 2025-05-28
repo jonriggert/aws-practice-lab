@@ -16,5 +16,9 @@ This is a personal learning repo. No credentials or sensitive info are committed
 - Document key setup steps and gotchas
 - Build reusable automation for future projects
 
+## 🔧 Change Log
+
+- 2025-05-28: Made repo public, added install script
+
 ## 🙏 Contributions
 Feedback, ideas, and code reviews welcome.
