@@ -1,0 +1,26 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Credentials / config files
+*.pem
+.env
+.aws/
+*.log
+
+# Python, Node, etc. extras (if you use them later)
+__pycache__/
+node_modules/
+
+# PowerShell user-specific or temp stuff
+*.ps1~
+*.log
+*.tmp
+*.bak
+
+# PowerShell profiles (user-specific setup)
+Microsoft.PowerShell_profile.ps1
