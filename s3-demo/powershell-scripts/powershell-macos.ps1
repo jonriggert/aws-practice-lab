@@ -1,0 +1,1 @@
+Write-Host "Powershell is working on macOS inside VS code!"
