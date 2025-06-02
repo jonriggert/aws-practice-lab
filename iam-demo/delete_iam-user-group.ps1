@@ -19,6 +19,7 @@ if ($confirm -ne "y") {
 try {
     Write-Host "Removing user from group..."
     $removeUserOutput = aws iam remove-user-from-group --user-name $userName --group-name $groupName 2>&1
+    if (-not $removeUserOutput) { $removeUserOutput = "Successfully removed user from group" }
     Write-Host $removeUserOutput
 } catch {
     Write-Host "Could not remove user from group: $_"
@@ -28,6 +29,7 @@ try {
 try {
     Write-Host "Delete IAM user..."
     $userDeleteOutput = aws iam delete-user --user-name $userName 2>&1
+    if (-not $userDeleteOutput) { $userDeleteOutput = "Successfully deleted user" }
     Write-Host $userDeleteOutput
 } catch {
     Write-Host "Could not delete user: $_"
@@ -39,6 +41,7 @@ try {
     Write-Host "Detaching ReadOnlyAccess policy from group..."
     $policyArn = 'arn:aws:iam::aws:policy/ReadOnlyAccess'
     $detachPolicyOutput = aws iam detach-group-policy --group-name $groupName --policy-arn $policyArn 2>&1
+    if (-not $detachPolicyOutput) { $detachPolicyOutput = "Successfully detached policy from group" }
     Write-Host $detachPolicyOutput
 } catch {
     Write-Host "Could not detach policy: $_"
@@ -48,6 +51,7 @@ try {
 try {
     Write-Host "Deleting IAM group..."
     $groupDeleteOutput = aws iam delete-group --group-name $groupName 2>&1
+    if (-not $groupDeleteOutput) { $groupDeleteOutput = "Successfully deleted group" }
     Write Host $groupDeleteOutput
 } catch {
     Write-Host "Could not delete group: $_"
